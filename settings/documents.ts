@@ -15,7 +15,7 @@ export const Documents: Paths[] = [
         href: "/setup",
       },
       {
-        title: "Changelog",
+        title: "Navigation",
         href: "/changelog",
       },
     ],
@@ -24,12 +24,19 @@ export const Documents: Paths[] = [
     spacer: true,
   },
   {
-    title: "Navigation",
+    title: "Cross-Border Payment",
     href: "/navigation",
-    heading: "Documents",
+    heading: "Features",
   },
+
   {
-    title: "Structure",
+    title: " Real Time FX Oracle",
+    href: "/nav",
+    
+  },
+
+  {
+    title: "Stable coin Liquidity Pool",
     href: "/structure",
     items: [
       {
@@ -48,44 +55,44 @@ export const Documents: Paths[] = [
     spacer: true,
   },
   {
-    title: "Markup",
+    title: "More Features",
     href: "/markup",
-    heading: "Components",
+    heading: "Upcoming",
     items: [
       {
-        title: "Cards",
+        title: "Dynamic Liquidity Farming",
         href: "/cards",
       },
       {
-        title: "Diagrams",
+        title: " Micro-Transaction Support",
         href: "/diagrams",
       },
       {
-        title: "Filetree",
+        title: "Fraud and Compliance Toolkit",
         href: "/filetree",
       },
       {
-        title: "Lists",
+        title: "Integration with Mobile Money Systems",
         href: "/lists",
       },
       {
-        title: "Maths",
+        title: "Predictive Liquidity Management",
         href: "/maths",
       },
       {
-        title: "Notes",
+        title: "On-Ramp and Off-Ramp Integration",
         href: "/notes",
       },
       {
-        title: "Steps",
+        title: " Customizable Fee Structures",
         href: "/steps",
       },
       {
-        title: "Table",
+        title: "Smart Routing for Optimized Swaps",
         href: "/table",
       },
       {
-        title: "Tabs",
+        title: "Stablecoin Yield Aggregation",
         href: "/tabs",
       },
     ],
