@@ -1,5 +1,5 @@
 export const url = "https://rubix-documents.vercel.app";
-export const siteicon = "/icon.png";
+export const siteicon = "/ico.png";
 
 export const gtm = "GTM-XXXXXXX";
 export const gtmconnected = true;
@@ -9,10 +9,10 @@ export const description = "This comprehensive documentation template, crafted w
 export const keywords = ["Next.js", "documentation", "Rubix Studios", "open source", "SEO"];
 export const urlimage = "/images/og-image.png";
 export const imagealt = "Rubix Studios Documentation";
-export const twitterhandle = "@RubixStudios";
+export const twitterhandle = "@CodeXlab042";
 
 export const companyname = "CodeX";
-export const companylink = "https://www.rubixstudios.com.au";
+export const companylink = "https://github.com/CodeX042";
 
 export const branding = true;
 export const rightsidebar = true;
