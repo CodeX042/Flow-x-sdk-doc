@@ -7,7 +7,7 @@ export const gtmconnected = true;
 export const sitename = "Flow-X";
 export const description = "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.";
 export const keywords = ["Next.js", "documentation", "Rubix Studios", "open source", "SEO"];
-export const urlimage = "/images/og-image.png";
+
 export const imagealt = "Rubix Studios Documentation";
 export const twitterhandle = "@CodeXlab042";
 
