@@ -1,70 +1,82 @@
-## SDK Modules Overview
-
-The FlowX SDK contains modules for specific tasks. Below is a high-level overview:
-
----
-
-### **Client Module**
-The `Client` module provides the main interface for interacting with FlowX's APIs.
-
-#### **Initialize the Client**
-Set up the FlowX client by providing your API key:
-
-```python
-from flowx_sdk.client import Client
-client = Client(api_key="your_api_key")
+## Usage
+### Importing the Package
+```
+import Client from "flowx_sdk/libs/client.js";
+import Wallet from "flowx_sdk/libs/wallet.js";
 ```
 
-### **Fetch Supported Currencies**
-Retrieve the list of currencies supported by FlowX:
-
-```python
-currencies = client.get_supported_currencies()
-print(currencies)
+### Wallet
+Create a Wallet
 ```
-### **Send Payment**
-Send a stablecoin-based payment:
-
-```python
-payment = client.send_payment(
-    sender_wallet="your_sender_wallet_address",
-    receiver_wallet="receiver_wallet_address",
-    amount="100.00",
-    currency="USD"
-)
-print(payment)
+const balance = wallet.getWalletBalance('USDT');
+console.log(`Wallet balance: ${balance}`);
 ```
-
-### Error Handling in FlowX SDK
-
-The FlowX SDK provides detailed error messages for smooth debugging.
-
-#### Authentication Errors
-Occurs when the API key is invalid or missing:
-
-```python
-from flowx_sdk.exceptions import AuthenticationError
-
-try:
-    client = Client(api_key="invalid_api_key")
-except AuthenticationError as e:
-    print(f"Authentication failed: {e}")
+Get Wallet Balance
 ```
-
-### Payment Errors
-Triggered when a payment fails due to insufficient funds, invalid wallet addresses, or network issues:
-
-```python
-from flowx_sdk.exceptions import PaymentError
-
-try:
-    payment = client.send_payment(
-        sender_wallet="your_sender_wallet_address",
-        receiver_wallet="receiver_wallet_address",
-        amount="100.00",
-        currency="USD"
-    )
-except PaymentError as e:
-    print(f"Payment failed: {e}")
+const balance = wallet.getWalletBalance('USDT');
+console.log(`Wallet balance: ${balance}`);
 ```
+Send Funds
+```
+const Transaction = require('flowx_sdk/lib/transaction'); // Assuming Transaction is defined in the package
+const senderWallet = new Wallet();
+const receiverWallet = new Wallet();
 
+const transaction = new Transaction(senderWallet, receiverWallet, 100, 'USDT');
+const result = senderWallet.sendFund(transaction);
+console.log(`Transaction status: ${result.status}`);
+```
+### Client
+Initialize the Client
+```
+const client = new Client('your_api_key');
+```
+### Authenticate
+Authentication happens automatically during client initialization. You can verify it:
+```
+if (client.authenticated) {
+    console.log('Authentication successful!');
+} else {
+    console.log('Authentication failed!');
+}
+```
+Fetch Supported Currencies
+```
+const supportedCurrencies = client.getSupportedCurrencies();
+console.log(supportedCurrencies);
+```
+Send Payment
+```
+const senderWallet = new Wallet();
+const receiverWallet = new Wallet();
+const transaction = client.sendPayment(senderWallet, receiverWallet, 50, 'USDT');
+console.log(`Transaction ID: ${transaction.transaction_id}`);
+console.log(`Transaction Status: ${transaction.status}`);
+```
+Check Payment Status
+```
+const status = client.getPaymentStatus('transaction_id_here');
+console.log(`Payment status: ${status}`);
+```
+___
+## Configuration
+Use a ```.env``` file to manage sensitive environment variables. Add the following key-value pairs to your ```.env``` file:
+```
+ACCESS_TOKEN=your_access_token
+BASE_URL=https://api.your-service.com
+```
+___
+## File Structure
+```
+flowx_sdk/
+├── lib/                   # Library files
+│   ├── wallet.js          # Wallet implementation
+│   ├── client.js          # Client implementation
+│   ├── transaction.js     # Transaction manager
+├── index.js               # Entry point
+├── package.json           # NPM metadata
+├── .env                   # Environment variables
+├── README.md              # Documentation
+```
+## Contributing
+We welcome contributions! Please fork the repository, create a feature branch, and submit a pull request.
