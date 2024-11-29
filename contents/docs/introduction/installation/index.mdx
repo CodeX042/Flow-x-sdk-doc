@@ -14,107 +14,13 @@ The easiest way to install the FlowX SDK is through `pip`:
 ```bash
 pip install flowx-sdk
 
+---
 
+## Python SDK Installation
 
-2. Install from the GitHub Repository
-For the latest development version, install directly from GitHub:
+### 1. **Install from the GitHub Repository**
+For the latest development version of the FlowX SDK, install it directly from GitHub:
 
-bash
-Copy code
+```bash
 pip install git+https://github.com/georgegoldman/FlowX.git
-3. Global Installation with pipx
-To use the SDK as a command-line tool globally:
 
-Ensure pipx is installed:
-
-bash
-Copy code
-python -m pip install pipx
-Install the FlowX SDK globally:
-
-bash
-Copy code
-pipx install flowx-sdk
-If reinstalling, use the -f flag:
-
-bash
-Copy code
-pipx install -f flowx-sdk
-4. Set Up a Virtual Environment
-It’s a good practice to use a virtual environment for Python projects to avoid dependency conflicts.
-
-Create a Virtual Environment:
-
-bash
-Copy code
-python -m venv .virtual_env_name
-Activate the Virtual Environment:
-
-On macOS/Linux:
-bash
-Copy code
-source .virtual_env_name/bin/activate
-On Windows:
-bash
-Copy code
-.virtual_env_name\Scripts\activate
-Install the SDK in the Virtual Environment:
-
-bash
-Copy code
-pip install flowx-sdk
-5. Initialize and Authenticate
-Once the SDK is installed, initialize and authenticate your setup:
-
-Initialize FlowX:
-
-bash
-Copy code
-flowx init
-Log In to Your Account:
-
-bash
-Copy code
-flowx login
-Sign Up (If New):
-
-bash
-Copy code
-flowx signup
-Set Your API Token:
-
-bash
-Copy code
-flowx create --token <your_api_token>
-JavaScript NPM Package Installation
-The FlowX NPM package makes integration with JavaScript applications straightforward.
-
-1. Install Using npm
-To install the NPM package, run:
-
-bash
-Copy code
-npm install flowx-npm-package
-2. Install as a Global Package
-To use FlowX as a command-line tool globally, install it globally:
-
-bash
-Copy code
-npm install -g flowx-npm-package
-Configuration for Both SDKs
-Use Environment Variables
-For security and flexibility, manage your sensitive data using environment variables. Create a .env file in your project directory and add:
-
-env
-Copy code
-ACCESS_TOKEN=your_access_token
-BASE_URL=https://api.flowx.com
-Example .env File
-env
-Copy code
-ACCESS_TOKEN=your_api_key_here
-BASE_URL=https://api.flowx.com
-Load these variables in your Python or JavaScript application:
-
-Python: Use the python-dotenv package.
-JavaScript: Use the dotenv package.
