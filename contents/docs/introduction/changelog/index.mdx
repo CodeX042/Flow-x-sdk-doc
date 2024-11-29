@@ -51,3 +51,20 @@ except AuthenticationError as e:
     print(f"Authentication failed: {e}")
 ```
 
+### Payment Errors
+Triggered when a payment fails due to insufficient funds, invalid wallet addresses, or network issues:
+
+```python
+from flowx_sdk.exceptions import PaymentError
+
+try:
+    payment = client.send_payment(
+        sender_wallet="your_sender_wallet_address",
+        receiver_wallet="receiver_wallet_address",
+        amount="100.00",
+        currency="USD"
+    )
+except PaymentError as e:
+    print(f"Payment failed: {e}")
+```
+
