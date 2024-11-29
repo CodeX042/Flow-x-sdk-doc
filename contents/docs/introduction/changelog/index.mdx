@@ -1,5 +1,37 @@
+## SDK Modules Overview
+
+The FlowX SDK contains modules for specific tasks. Below is a high-level overview:
+
 ---
-title: Changelog
-description: Changelogs and improvements to the Documents projects.
-keywords: ["changelog", "guide", "nextjs", "documents"]
----
+
+### **Client Module**
+The `Client` module provides the main interface for interacting with FlowX's APIs.
+
+#### **Initialize the Client**
+Set up the FlowX client by providing your API key:
+
+```python
+from flowx_sdk.client import Client
+client = Client(api_key="your_api_key")
+```
+
+### **Fetch Supported Currencies**
+Retrieve the list of currencies supported by FlowX:
+
+```python
+currencies = client.get_supported_currencies()
+print(currencies)
+```
+### **Send Payment**
+Send a stablecoin-based payment:
+
+```python
+payment = client.send_payment(
+    sender_wallet="your_sender_wallet_address",
+    receiver_wallet="receiver_wallet_address",
+    amount="100.00",
+    currency="USD"
+)
+print(payment)
+```
+
