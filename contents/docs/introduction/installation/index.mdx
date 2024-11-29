@@ -1,167 +1,120 @@
+# Installation Guide for FlowX SDK
+
+The FlowX SDK is available for both Python and JavaScript, making it versatile and developer-friendly. Follow the detailed installation instructions below to set up the SDK for your preferred platform.
+
 ---
-title: Installation
-description: This guide covers the installation of Documents and how to edit your new project.
-keywords: ["installation", "github", "node", "guide", "nextjs", "documents"]
----
 
-To install and edit the Documents, you need to have several prerequisites in place. Here's a list of all the essential pre-requisites 
-for setting up and working on this project.
+## Python SDK Installation
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Frubix-documents.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
+The Python SDK provides a seamless way to integrate FlowX into Python applications. Follow these steps to install and set up the SDK:
 
-## Prerequisites
+### 1. **Install the SDK Using `pip`**
+The easiest way to install the FlowX SDK is through `pip`:
 
-<Step>
-<StepItem title="System Requirements">
-
-  - **Node.js:** Make sure you have Node.js installed. The project uses `npm`, which comes with Node.js. Install Node.js from here.
-  - **NPM or Yarn:** Since the project uses `npm` commands, ensure that npm is installed with Node.js. Alternatively, you can use Yarn if preferred.
-
-To verify installation, run:
-
-  ```bash
-  node -v
-  npm -v
-  ```
-
-</StepItem>
-<StepItem title="Git">
-You need to have Git installed to clone the repository. Download Git from [here](https://git-scm.com/).
-
-  ```bash
-  git --version
-  ```
-
-</StepItem>
-<StepItem title="Code Editor">
-You’ll need a code editor to work on the project. Common options include:
-
-  - [Visual Studio Code](https://code.visualstudio.com/)
-  - [WebStorm](https://www.jetbrains.com/webstorm/)
-  - Any other text editor you prefer.
-
-</StepItem>
-<StepItem title="Required Knowledge">
-- **Next.js:** Since this is a Next.js project, you should be familiar with Next.js basics.
-- **React:** The project uses React, so understanding React's component structure and hooks will help.
-- **TypeScript:** The project is written in TypeScript, so you should have a basic understanding of it.
-- **Tailwind:** The project uses Tailwind CSS for styling.
-- **MDX:** Markdown + JSX (MDX) is used for writing documentation.
-
-</StepItem>
-</Step>
-
-## Installation
-
-<Step>
-<StepItem title="Clone the Repository">
-First, clone the repository to your local machine using Git:
-
-  ```bash
-  git clone https://github.com/rubixvi/rubix-documents.git
-  ```
-
-Change the directory to the project folder:
-
-  ```bash
-  cd rubix-documents
-  ```
-
-</StepItem>
-<StepItem title="Install Dependencies">
-Use npm to install all the required dependencies:
-
-  ```bash
-  npm install
-  ```
-
-This will install all the dependencies listed in the package.json file, including:
-
-  - Next.js
-  - React
-  - TypeScript
-  - Tailwind CSS
-  - MDX components
-  - Other dependencies like ESLint, PostCSS, Husky, etc.
-
-</StepItem>
-
-<StepItem title="Running the Development Server">
-Start the development server by running:
-
-  ```bash
-  npm run dev
-  ```
-
-This will start the local server, and you can open your browser at:
-
-  ```arduino
-  http://localhost:3000
-  ```
-
-</StepItem>
-
-<StepItem title="Editing the Project">
-  - **MDX Files:** Documentation content is stored in `contents/docs`.
-  - **Components:** You can edit React components in the `components/` directory.
-  - **Tailwind:** Tailwind styling are managed in `tailwind.config.ts` and `app/globals.css`.
-
-To make any changes to the project, open the files in your editor and modify them as needed.
+```bash
+pip install flowx-sdk
 
 
-<Note title="Required" type="danger">
-  The project's search functionality relies on the Husky's automation to build `search-data/documents.json` ensure git commit is performed to generate this file.
-</Note>
 
+2. Install from the GitHub Repository
+For the latest development version, install directly from GitHub:
 
-</StepItem>
-<StepItem title="Building for Production">
-Once you’ve made your changes and want to build the project for production:
+bash
+Copy code
+pip install git+https://github.com/georgegoldman/FlowX.git
+3. Global Installation with pipx
+To use the SDK as a command-line tool globally:
 
-  ```bash
-  npm run build
-  ```
+Ensure pipx is installed:
 
-This will generate a production-ready build of the app.
+bash
+Copy code
+python -m pip install pipx
+Install the FlowX SDK globally:
 
-</StepItem>
-<StepItem title="Running Production Server">
-To run the production server:
+bash
+Copy code
+pipx install flowx-sdk
+If reinstalling, use the -f flag:
 
-  ```bash
-  npm run start
-  ```
+bash
+Copy code
+pipx install -f flowx-sdk
+4. Set Up a Virtual Environment
+It’s a good practice to use a virtual environment for Python projects to avoid dependency conflicts.
 
-The production app will be available at:
+Create a Virtual Environment:
 
-  ```arduino
-  http://localhost:3000
-  ```
+bash
+Copy code
+python -m venv .virtual_env_name
+Activate the Virtual Environment:
 
-</StepItem>
-</Step>
+On macOS/Linux:
+bash
+Copy code
+source .virtual_env_name/bin/activate
+On Windows:
+bash
+Copy code
+.virtual_env_name\Scripts\activate
+Install the SDK in the Virtual Environment:
 
-## Optional
-<Step>
-<StepItem title="Deploying to Vercel">
-This project is optimized for Vercel deployment. To deploy to Vercel:
+bash
+Copy code
+pip install flowx-sdk
+5. Initialize and Authenticate
+Once the SDK is installed, initialize and authenticate your setup:
 
-  - Go to [vercel.com](https://vercel.com/) and sign up.
-  - Link your GitHub repository and deploy the project.
-  - Vercel will handle the build process for you automatically.
+Initialize FlowX:
 
-The production app will be available at:
+bash
+Copy code
+flowx init
+Log In to Your Account:
 
-  ```bash
-  http://localhost:3000
-  ```
+bash
+Copy code
+flowx login
+Sign Up (If New):
 
-</StepItem>
-<StepItem title="Linting and Pre-commit Hooks">
-The project uses ESLint for linting and Husky for Git hooks. These tools are configured automatically, but you can customize them in `.eslintrc.json` and `.husky` directories.
-</StepItem>
-</Step>
+bash
+Copy code
+flowx signup
+Set Your API Token:
 
-## Important Information
+bash
+Copy code
+flowx create --token <your_api_token>
+JavaScript NPM Package Installation
+The FlowX NPM package makes integration with JavaScript applications straightforward.
 
-The project's search functionality relies on the Husky's automation to build `search-data/documents.json` ensure git commit is performed to generate this file.
+1. Install Using npm
+To install the NPM package, run:
+
+bash
+Copy code
+npm install flowx-npm-package
+2. Install as a Global Package
+To use FlowX as a command-line tool globally, install it globally:
+
+bash
+Copy code
+npm install -g flowx-npm-package
+Configuration for Both SDKs
+Use Environment Variables
+For security and flexibility, manage your sensitive data using environment variables. Create a .env file in your project directory and add:
+
+env
+Copy code
+ACCESS_TOKEN=your_access_token
+BASE_URL=https://api.flowx.com
+Example .env File
+env
+Copy code
+ACCESS_TOKEN=your_api_key_here
+BASE_URL=https://api.flowx.com
+Load these variables in your Python or JavaScript application:
+
+Python: Use the python-dotenv package.
+JavaScript: Use the dotenv package.
