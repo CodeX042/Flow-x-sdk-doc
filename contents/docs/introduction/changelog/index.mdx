@@ -35,3 +35,19 @@ payment = client.send_payment(
 print(payment)
 ```
 
+### Error Handling in FlowX SDK
+
+The FlowX SDK provides detailed error messages for smooth debugging.
+
+#### Authentication Errors
+Occurs when the API key is invalid or missing:
+
+```python
+from flowx_sdk.exceptions import AuthenticationError
+
+try:
+    client = Client(api_key="invalid_api_key")
+except AuthenticationError as e:
+    print(f"Authentication failed: {e}")
+```
+
