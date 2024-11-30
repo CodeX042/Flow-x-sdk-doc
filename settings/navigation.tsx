@@ -7,7 +7,7 @@ export const Navigations = [
   },
   {
     title: "Home",
-    href: "https://flow-x-landing-page.vercel.app/
+    href: "https://flow-x-landing-page.vercel.app/"
     external: true,
   }
 ];
