@@ -27,7 +27,7 @@ After creating a liquidity pool, you can add more liquidity to it. Use the addLi
 
 Example: Add Liquidity
 javascript
-Copy code
+```
 const poolAddress = 'your_pool_address_here';  // Replace with actual pool address
 const inputTokenAmount = 100;  // Amount of the token to swap
 const inputTokenType = 'TokenX';  // The type of token being swapped (e.g., 'TokenX' or 'TokenY')
@@ -36,6 +36,7 @@ const stableSwap = async () => {
   const result = await liquidityService.stableSwap(poolAddress, inputTokenAmount, inputTokenType);
   console.log('Swap Completed:', result);
 };
+```
 stableSwap();
 This will:
 
