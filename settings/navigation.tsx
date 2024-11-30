@@ -7,7 +7,7 @@ export const Navigations = [
   },
   {
     title: "Home",
-    href: "https://www.rubixstudios.com.au/",
+    href: "https://flow-x-landing-page.vercel.app/
     external: true,
   }
 ];
