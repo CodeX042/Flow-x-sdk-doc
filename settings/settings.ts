@@ -1,4 +1,4 @@
-export const url = "https://rubix-documents.vercel.app";
+export const url = "https://flow-x-landing-page.vercel.app/";
 export const siteicon = "/icon.png";
 
 export const gtm = "GTM-XXXXXXX";
@@ -12,7 +12,7 @@ export const imagealt = "Rubix Studios Documentation";
 export const twitterhandle = "@RubixStudios";
 
 export const companyname = "Flow-x";
-export const companylink = "https://www.rubixstudios.com.au";
+export const companylink = "https://flow-x-landing-page.vercel.app/";
 
 export const branding = true;
 export const rightsidebar = true;
